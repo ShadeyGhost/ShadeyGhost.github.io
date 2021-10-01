@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/pabodha.me/static/css/main.cb536596.chunk.css",
+    "main.js": "/pabodha.me/static/js/main.5f3e18b7.chunk.js",
+    "main.js.map": "/pabodha.me/static/js/main.5f3e18b7.chunk.js.map",
+    "runtime-main.js": "/pabodha.me/static/js/runtime-main.1ca110ae.js",
+    "runtime-main.js.map": "/pabodha.me/static/js/runtime-main.1ca110ae.js.map",
+    "static/js/2.c1e2b143.chunk.js": "/pabodha.me/static/js/2.c1e2b143.chunk.js",
+    "static/js/2.c1e2b143.chunk.js.map": "/pabodha.me/static/js/2.c1e2b143.chunk.js.map",
+    "index.html": "/pabodha.me/index.html",
+    "static/css/main.cb536596.chunk.css.map": "/pabodha.me/static/css/main.cb536596.chunk.css.map",
+    "static/js/2.c1e2b143.chunk.js.LICENSE.txt": "/pabodha.me/static/js/2.c1e2b143.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1ca110ae.js",
+    "static/js/2.c1e2b143.chunk.js",
+    "static/css/main.cb536596.chunk.css",
+    "static/js/main.5f3e18b7.chunk.js"
+  ]
+}
