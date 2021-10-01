@@ -1,0 +1,145 @@
+:root{
+  --black: #2C2C2C;
+  --red: #FF9999;
+  --offwhite: #ECECEC;
+  --offred: #873535;
+  --transwhite: rgba(255, 255, 255, 0.72);
+
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+h1,h2 {
+  font-family: 'Roboto Slab', serif;
+}
+
+h1 {
+  font-size: 70px;
+  line-height: 76px;
+  padding: 1rem 0;
+}
+
+.main-section {
+  height: 100vh;
+  min-height: 700px;
+  width: 100%;
+  background-color: var(--black);
+  display: inline-flex;
+}
+
+.welcome-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 4rem;
+  color: var(--offwhite);
+}
+
+.welcome-message p {
+  opacity: 60%;
+}
+
+.contact-btn {
+  width: fit-content;
+  margin-top: 3rem;
+  background-color: #FF9999;
+  padding: 1rem 1.4rem;
+  border: none;
+  border-radius: 14px;
+  font-weight: 600;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  background-color: var(--black);
+  color: var(--red);
+  outline: 2px solid var(--red);
+}
+
+.skills-sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.bitmoji-sec { position: relative; }
+
+.bitmoji-sec:hover .lang-icon:not(:hover) {
+  opacity: 0;
+}
+
+.lang-icon { 
+  position: absolute; 
+  transition: 0.6s ease;
+  padding: 1rem;
+  width: 230px;
+  height: 100px;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.lang-icon:hover {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--offred);
+}
+
+.lang-icon:hover .lang-info {
+  display: block;
+}
+
+.lang-icon img {
+  transition: 0.4s ease;
+}
+
+.lang-info {
+  display: none;
+  font-weight: 500;
+  color: var(--offwhite);
+}
+
+.lang-info p {
+  max-width: 116px;
+  font-size: 0.8rem;
+  padding-top: 0.2rem;
+  color: var(--transwhite);
+}
+
+#html-ico { transform: translate(-220px, 80px); }
+
+#html-ico img { transform: rotate(-70deg); }
+
+#css-ico { transform: translate(-160px, -50px); }
+
+#css-ico img { transform: rotate(-40deg); }
+
+#js-ico { transform: translate(-40px, -100px); }
+
+#node-ico { transform: translate(220px, -50px); justify-content: flex-start; }
+
+#node-ico img { transform: rotate(40deg); }
+
+#react-ico { transform: translate(290px, 80px); justify-content: flex-start; }
+
+
+
+#html-ico:hover img,
+#css-ico:hover img,
+#js-ico:hover img,
+#node-ico:hover img,
+#react-ico:hover img {
+  transform: rotate(0deg);
+} 
