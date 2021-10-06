@@ -3,143 +3,103 @@
   --red: #FF9999;
   --offwhite: #ECECEC;
   --offred: #873535;
-  --transwhite: rgba(255, 255, 255, 0.72);
+  --transwhite: rgba(255, 255, 255, .4);
+  
+  --headerfont: 'Crete Round', serif;
+  --contentfont: 'Source Sans Pro', sans-serif;
 
-}
-
-body {
-  margin: 0;
 }
 
 * {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--contentfont);
   margin: 0;
 }
 
-h1,h2 {
-  font-family: 'Roboto Slab', serif;
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
-h1 {
-  font-size: 70px;
-  line-height: 76px;
-  padding: 1rem 0;
-}
+h1 { font-size: clamp(5rem, 10vw, 14rem); font-family: var(--headerfont); }
+h2 { font-size: clamp(2rem, 3vw, 6rem); }
 
-.main-section {
+.maincontent {
+  background-color: var(--black);
   height: 100vh;
-  min-height: 700px;
   width: 100%;
-  background-color: var(--black);
   display: inline-flex;
-}
-
-.welcome-message {
-  display: flex;
+  color: var(--offwhite);
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  justify-content: center;
-  padding-left: 4rem;
-  color: var(--offwhite);
 }
 
-.welcome-message p {
-  opacity: 70%;
+.maincontent--headertxt { display: flex; align-items: flex-end;}
+
+.maincontent--headertxt h1 {
+  text-align: center;
+  letter-spacing: 5px;
+  position: relative;
 }
 
-.contact-btn {
-  width: fit-content;
-  margin-top: 3rem;
-  background-color: #FF9999;
-  padding: 1rem 1.4rem;
-  border: none;
-  border-radius: 14px;
-  font-weight: 600;
-  transition: 0.4s ease;
-  cursor: pointer;
-}
-
-.contact-btn:hover {
-  background-color: var(--black);
-  color: var(--red);
-  outline: 2px solid var(--red);
-}
-
-.skills-sec {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.bitmoji-sec { position: relative; }
-
-.bitmoji-sec:hover .lang-icon:not(:hover) {
-  opacity: 0;
-}
-
-.lang-icon { 
-  position: absolute; 
-  transition: 0.6s ease;
-  padding: 1rem;
-  width: 230px;
-  height: 100px;
-  display: flex;
-  gap: 20px;
-  justify-content: flex-end;
-  align-items: center;
-  border-radius: 12px;
-}
-
-.lang-icon:hover {
-  display: flex;
-  flex-direction: row;
-  background-color: var(--offred);
-}
-
-.lang-icon:hover .lang-info {
+.headertxt--lineblinker {
   display: block;
+  height: min(1vw, .5em);
+  width: min(3vw, 2em);
+  background-color: white;
+  transform: translateY(-1vw);
+  animation: blink .8s infinite;
 }
 
-.lang-icon img {
-  transition: 0.4s ease;
-}
-
-.lang-info {
-  display: none;
-  font-weight: 500;
-  color: var(--offwhite);
-}
-
-.lang-info p {
-  max-width: 116px;
-  font-size: 0.8rem;
-  padding-top: 0.2rem;
+.maincontent h2 {
   color: var(--transwhite);
+  font-weight: 600;
+  text-align: center;
+  transform: translateY(3rem);
+  opacity: 0;
+  animation-name: textreveal;
+  animation-duration: 3s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
 }
 
-#html-ico { transform: translate(-220px, 80px); }
+.maincontent--ufo {
+  position: absolute;
+  height: min(12vw, 150px);
+  top: -9vw;
+  left: -8vw;
+  opacity: 0;
+  transform: rotate(-6deg);
+  animation-name: flyingufo;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+}
 
-#html-ico img { transform: rotate(-70deg); }
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
 
-#css-ico { transform: translate(-160px, -50px); }
+@keyframes textreveal {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
-#css-ico img { transform: rotate(-40deg); }
+@keyframes flyingufo {
+  0% {
+    left: -80%;
+    top: -220%;
+  }
 
-#js-ico { transform: translate(-40px, -100px); }
-
-#node-ico { transform: translate(220px, -50px); justify-content: flex-start; }
-
-#node-ico img { transform: rotate(40deg); }
-
-#react-ico { transform: translate(290px, 80px); justify-content: flex-start; }
-
-
-
-#html-ico:hover img,
-#css-ico:hover img,
-#js-ico:hover img,
-#node-ico:hover img,
-#react-ico:hover img {
-  transform: rotate(0deg);
-} 
+  100% {
+    top: -9vw;
+    left: -8vw;
+    opacity: .8;
+  }
+}
