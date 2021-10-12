@@ -37,6 +37,7 @@ p { font-size: 20px; font-family: var(--font-mono);}
   padding: 0 4rem;
   display: flex;
   justify-content: flex-end;
+  z-index: 1;
 }
 
 .navbar--links {
@@ -161,4 +162,8 @@ p { font-size: 20px; font-family: var(--font-mono);}
   font-size: var(--social-icon-size);
   gap: .8em;
   margin-top: 2rem;
+}
+
+@media screen and (min-width:768px) {
+  .social-icons-mobile { display: none; }
 }

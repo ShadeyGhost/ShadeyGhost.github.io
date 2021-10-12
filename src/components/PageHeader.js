@@ -30,7 +30,7 @@ const PageHeader = () => {
     return(
         <main className="maincontent">
             <div className="headline">
-                <span className="headline--vert-line" />
+                <span className="headline--vert-line"></span>
                 <div className="headline--img-container">
                     <img src="./images/port-img.png" alt="Pabodha" className="headline--img" />
                 </div>

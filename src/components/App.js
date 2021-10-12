@@ -1,4 +1,3 @@
-// import About from "./About";
 import Navbar from "./Navbar";
 import PageHeader from "./PageHeader";
 import Socialicons from "./Socialicons";
@@ -14,7 +13,6 @@ function App() {
       <Navbar />
       <Socialicons />
       <PageHeader />
-      {/* <About /> */}
     </>
   );
 }
