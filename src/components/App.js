@@ -1,6 +1,7 @@
 import Navbar from "./Navbar";
-import PageHeader from "./PageHeader";
 import Socialicons from "./Socialicons";
+import PageHeader from "./PageHeader";
+import About from "./About";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -13,6 +14,7 @@ function App() {
       <Navbar />
       <Socialicons />
       <PageHeader />
+      <About />
     </>
   );
 }
